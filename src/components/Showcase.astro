@@ -1,0 +1,97 @@
+---
+import SmallImage from "../images/framework-logos-small.png";
+import Image from "../images/framework-logos.png";
+---
+
+<section class="showcase">
+  <div class="showcase-text">
+    <h1 class="text-astro">Astro Build faster websites!</h1>
+    <p>
+      Pull content from anywhere and serve it fast with Astro's next-gen island
+      architecture.
+    </p>
+  </div>
+  <div class="showcase-img">
+    <img class="logos" src={Image} alt="framework logos" />
+    <img class="logos-small" src={SmallImage} alt="small framework logos" />
+    <div class="container-btn">
+      <button class="astro-button">Get started</button>
+    </div>
+  </div>
+
+  <p class="showcase-demo">
+    <small>This is a demo site used to become a better web developer</small>
+  </p>
+</section>
+
+<style>
+  .showcase {
+    height: auto;
+    background-image: var(--astro-gradient);
+    padding: 30px;
+  }
+
+  .showcase-blog {
+    min-height: 300px;
+  }
+
+  .showcase-text {
+    max-width: 500px;
+    color: var(--white);
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  .showcase h1 {
+    font-size: 50px;
+    color: var(--white);
+    margin-bottom: 20px;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+
+  .container-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .astro-button {
+    align-items: center;
+    background-color: #e9d5ff;
+    border-color: #000000;
+    border-style: solid;
+    color: #7e22ce;
+    display: flex;
+    font-family: ui-sans-serif, system-ui, -apple-system;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0 8px;
+    justify-content: center;
+    line-height: 48px;
+    text-align: center;
+    font-family: ;
+  }
+
+  .showcase p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .showcase-img {
+    text-align: center;
+  }
+
+  .showcase-img img {
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  .showcase-demo {
+    color: var(--white);
+    text-align: center;
+    font-weight: 300;
+  }
+</style>
