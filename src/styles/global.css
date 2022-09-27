@@ -7,8 +7,8 @@
   --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
   --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-  /* --color-text: hsl(12, 5%, 4%); */
-  --color-bg: hsl(10, 21%, 95%);
+  --full-black: hsl(0, 0%, 0%);
+  --shadow-bg: hsl(210, 40%, 98%);
   --color-border: hsl(17, 24%, 90%);
 }
 
@@ -24,13 +24,13 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: #f8fafc;
-  color: #333;
+  background: var(--shadow-bg);
+  color:  var(--full-black);
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color:  var(--full-black);
 }
 
 p {
@@ -61,8 +61,8 @@ h3 {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  background: #333;
-  color: #fff;
+  background: var(--full-black);
+  color: var(--white);
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 1px;

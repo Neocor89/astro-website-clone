@@ -1,27 +1,51 @@
 ---
 import SmallImage from "../images/framework-logos-small.png";
 import Image from "../images/framework-logos.png";
+
+export interface Props {
+  heading?: string;
+  text?: string;
+  showExtra?: boolean;
+}
+
+const {
+  heading = "Astro Build faster websites!",
+  text = "Pull content from anywhere and serve it fast with Astro's next-gen island architecture.",
+  showExtra = false,
+} = Astro.props as Props;
 ---
 
 <section class="showcase">
   <div class="showcase-text">
-    <h1 class="text-astro">Astro Build faster websites!</h1>
+    <h1 class="text-astro">{heading}</h1>
     <p>
-      Pull content from anywhere and serve it fast with Astro's next-gen island
-      architecture.
+      {text}
     </p>
   </div>
-  <div class="showcase-img">
-    <img class="logos" src={Image} alt="framework logos" />
-    <img class="logos-small" src={SmallImage} alt="small framework logos" />
-    <div class="container-btn">
-      <button class="astro-button">Get started</button>
-    </div>
-  </div>
 
-  <p class="showcase-demo">
-    <small>This is a demo site used to become a better web developer</small>
-  </p>
+  {
+    showExtra && (
+      <>
+        <div class="showcase-img">
+          <img class="logos" src={Image} alt="framework logos" />
+          <img
+            class="logos-small"
+            src={SmallImage}
+            alt="small framework logos"
+          />
+          <div class="container-btn">
+            <button class="astro-button">Get started</button>
+          </div>
+        </div>
+
+        <p class="showcase-demo">
+          <small>
+            This is a demo site used to become a better web developer
+          </small>
+        </p>
+      </>
+    )
+  }
 </section>
 
 <style>
@@ -60,7 +84,7 @@ import Image from "../images/framework-logos.png";
   .astro-button {
     align-items: center;
     background-color: #e9d5ff;
-    border-color: #000000;
+    border-color: var(--full-black);
     border-style: solid;
     color: #7e22ce;
     display: flex;
