@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import logoSmallDeploy from "../images/deploy-logos-small.png";
+import logoDeploy from "../images/deploy-logos.png";
 ---
 
 <Layout title="About Astro">
@@ -22,7 +25,7 @@ import Layout from "../layouts/Layout.astro";
         impedit.
       </p>
 
-      <div class="card">
+      <Card dark={true}>
         <h3>Use the tools you already love</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum
@@ -32,11 +35,13 @@ import Layout from "../layouts/Layout.astro";
           laborum impedit nesciunt ut voluptatum assumenda aspernatur libero
           iusto error molestias dolorum, necessitatibus labore?
         </p>
-      </div>
+      </Card>
 
-      <h3>Deploy to anywhere, even the edge</h3>
-      <!-- <img class="logos" src="img/deploy-logos.png" alt="" /> -->
-      <!-- <img class="logos-small" src="img/deploy-logos-small.png" alt="" /> -->
+      <h3 class="text-center">Deploy to anywhere, even the edge</h3>
+
+      <img class="logos" src={logoDeploy} alt="logo deploy Astro" />
+      <img class="logos-small" src={logoSmallDeploy} alt="logo deploy Astro" />
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus,
         vel ipsum mollitia aliquid cumque commodi corrupti omnis ipsam sit
