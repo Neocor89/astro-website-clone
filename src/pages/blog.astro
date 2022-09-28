@@ -17,8 +17,13 @@ const posts = await Astro.glob("../posts/*.md");
       {
         posts.map((post) => (
           <Card>
-            <h3>{post.frontmatter.title}</h3>
-            <img src={post.frontmatter.image} />
+            <div class="blog-page__container">
+              <h3>{post.frontmatter.title}</h3>
+              <span class="blog-page__date">{post.frontmatter.date}</span>
+              by
+              <span class="blog-page__author">{post.frontmatter.author}</span>
+            </div>
+            <img class="blog-page__cover" src={post.frontmatter.image} />
             <p>{post.frontmatter.excerpt}</p>
             <a class="btn" href={`/${post.frontmatter.slug}`}>
               Read More

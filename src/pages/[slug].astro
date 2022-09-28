@@ -23,8 +23,17 @@ const { Content, frontmatter } = Astro.props.post;
     <div class="container">
       <Card>
         <a href="/blog" class="btn-astro">Go Blog Page</a>
-        <h2>{frontmatter.title}</h2>
         <img class="cover-imgage" src={frontmatter.image} />
+        <h2 class="blog-title">{frontmatter.title}</h2>
+        <div class="blog-info__container">
+          <span class="blog-info__date">
+            {frontmatter.date}
+          </span>
+          by
+          <span class="blog-info__author">
+            {frontmatter.author}
+          </span>
+        </div>
         <Content />
       </Card>
     </div>

@@ -82,6 +82,47 @@ h3 {
   transition: all 0.3s ease;
 }
 
+.cover-imgage {
+  display: block;
+  margin: 0 auto;
+  width: 30vw;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+h2.blog-title {
+  display: block;
+  text-align: center;
+}
+
+.blog-page__container {
+  margin-top: -15px;
+}
+
+.blog-info__container {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+
+.blog-info__author,
+.blog-page__author {
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.blog-info__date,
+.blog-page__date {
+  margin-right: 10px;
+}
+
+img.blog-page__cover {
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
 .logos {
   display: block;
   margin: 0 auto;
@@ -109,6 +150,7 @@ h3 {
 
 .page-content h2 {
   font-size: 40px;
+  font-family: ui-sans-serif, system-ui;
 }
 
 .page-content h3 {
